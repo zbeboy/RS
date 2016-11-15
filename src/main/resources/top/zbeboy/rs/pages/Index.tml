@@ -1,0 +1,47 @@
+<html t:type="layout" title="RS Index"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+>
+
+<!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+<!-- Main hero unit for a primary marketing message or call to action -->
+<div class="hero-unit">
+    <p>
+        <img src="${asset:context:images/tapestry.png}"
+             alt="${message:greeting}" title="${message:greeting}"/>
+    </p>
+    <h3>${message:greeting}</h3>
+    <p>当前时间: <strong>${currentTime}</strong></p>
+    <p>
+        <t:actionlink t:id="learnmore" class="btn btn-primary btn-large">更多 &raquo;</t:actionlink>
+    </p>
+</div>
+
+<!-- Example row of columns -->
+<div class="row">
+    <t:form>
+        <t:errors/>
+        <div class="input-group">
+            <input t:type="upload" t:id="file" t:value="file" validate="required"/>
+            <span class="input-group-btn">
+                <input type="submit" class="btn btn-default" value="提交"/>
+            </span>
+        </div>
+    </t:form>
+    <div class="list-group" style="margin-top:10px;">
+        <t:loop source="files" value="filesBean">
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-md-6">
+                        <t:actionlink t:id="download" context="${filesBean.fileName}">${filesBean.fileName}</t:actionlink>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        ${filesBean.modifyTime}
+                    </div>
+                </div>
+            </li>
+        </t:loop>
+    </div>
+</div>
+
+</html>

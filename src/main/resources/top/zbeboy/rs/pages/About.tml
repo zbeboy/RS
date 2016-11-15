@@ -1,0 +1,23 @@
+<html t:type="layout" title="About RS"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <div class="row">
+        <div class="span12">
+            <p>ISY 网站配置下载站点</p>
+        </div>
+    </div>
+
+    <t:if test="learn">
+        <div class="row">
+            <div class="span12">
+                <p>
+                    访问
+                    <a href="https://zbeboy.github.io/ISY/">GITHUB</a>
+                    了解更多...
+                </p>
+            </div>
+        </div>
+    </t:if>
+
+</html>

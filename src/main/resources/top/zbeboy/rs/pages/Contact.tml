@@ -1,0 +1,7 @@
+<html t:type="layout" title="Contact RS"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <p>若存在任何问题，可加QQ：863052317 联系作者</p>
+
+</html>
